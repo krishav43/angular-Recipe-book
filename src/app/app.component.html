@@ -1,0 +1,21 @@
+<!-- <app-header 
+(onRecipeList)="onRecipeTab($event)" 
+(onShoppingList)="onShoppingTab($event)"></app-header> -->
+<!-- <app-header 
+(featureSelected)="onNavigate($event)"></app-header> using with Output feature -->
+<app-header></app-header>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <!-- <app-recipe *ngIf="loadedFeature==='Recipe'"></app-recipe>
+            <app-shopping-list *ngIf="loadedFeature!=='Recipe'"></app-shopping-list> using without router -->
+            <router-outlet></router-outlet>
+        </div>
+        <!-- <div class="col-sm-12" *ngIf="recipeTab">
+            <app-recipe></app-recipe>
+        </div>
+        <div class="col-sm-12" *ngIf="shoppingTab">
+            <app-shopping-list></app-shopping-list>
+        </div> -->
+    </div>
+</div>
