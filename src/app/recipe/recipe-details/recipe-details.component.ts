@@ -26,7 +26,7 @@ export class RecipeDetailsComponent implements OnInit {
 
   addIngredient(ingredients:Ingredient[]){
     for(var i=0;i<ingredients.length;i++){
-      alert(ingredients[i].name);
+      //alert(ingredients[i].name);
       this.recipeService.addIngredient(ingredients[i])
     }
     

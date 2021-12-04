@@ -20,7 +20,7 @@ export class RecipeServices{
     private recipes:Recipe[]=[];
 
     getRecipe(){
-        console.log(this.recipes);
+        //console.log(this.recipes);
         return this.recipes.slice();
 
     }
@@ -32,7 +32,7 @@ export class RecipeServices{
     }
 
     addIngredient(ingredient:Ingredient){
-        console.log("Recipe Service "+ ingredient)
+        //console.log("Recipe Service "+ ingredient)
         this.shoppingService.addNewIngredient(ingredient);
 
     }
@@ -51,7 +51,7 @@ export class RecipeServices{
         var id=this.getRecipeId();
         recipe.id=id+1;
         this.recipes.push(recipe);
-        console.log(this.recipes);
+        //console.log(this.recipes);
         this.recipesChanged.next(this.recipes.slice());
     }
 
@@ -69,17 +69,17 @@ export class RecipeServices{
     updateRecipe(recipe:Recipe,id:number){
         for(var i=0;i<this.recipes.length;i++){
             if(this.recipes[i].id==id){
-                alert(id+" "+recipe.id+" "+this.recipes[i].id)
+                //alert(id+" "+recipe.id+" "+this.recipes[i].id)
                 recipe.id=id;
                 this.recipes[i]=recipe;
             }
         }
-        console.log(this.recipes);
+        //console.log(this.recipes);
         this.recipesChanged.next(this.recipes.slice());
     }
 
     deleteRecipe(recipeId:number){
-        console.log(recipeId-1);
+        //console.log(recipeId-1);
         var index;
         for(var i=0;i<this.recipes.length;i++){
             if(this.recipes[i].id==recipeId){
@@ -88,7 +88,7 @@ export class RecipeServices{
             }
         }
         this.recipes.splice(index,1);
-        console.log(this.recipes);
+        //console.log(this.recipes);
         this.recipesChanged.next(this.recipes.slice());
     }
 

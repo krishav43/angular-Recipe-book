@@ -24,10 +24,10 @@ export class ShoppingService{
     }
 
     addNewIngredient(newIngredient:Ingredient){
-        console.log("Shopping Service "+ newIngredient)
+        //console.log("Shopping Service "+ newIngredient)
         this.ingredients.push(newIngredient);
         this.changedIngredient.next(this.ingredients.slice());
-        console.log("After add ingredient "+ this.ingredients);
+        //console.log("After add ingredient "+ this.ingredients);
     }
 
     addIngredients(ingredient:Ingredient){

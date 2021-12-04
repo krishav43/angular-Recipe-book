@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
+import { AboutComponent } from './about/about.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,9 @@ const routes: Routes = [
   {
     path:'auth',
     loadChildren: './auth/auth.module#AuthModule'
+  },
+  {
+    path:'about', component: AboutComponent
   }
 ];
 

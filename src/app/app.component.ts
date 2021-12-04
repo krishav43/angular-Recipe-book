@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { Route, ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from './auth/auth.service';
 
@@ -9,14 +10,19 @@ import { AuthService } from './auth/auth.service';
 })
 export class AppComponent implements OnInit{
 
-  constructor(private router:Router, private authService:AuthService){};
-  title = 'Project';
+  constructor(private router:Router, private authService:AuthService, private titleService: Title){};
+  title = 'Recipe Book';
   shoppingTab:boolean=false;
   recipeTab:boolean=false;
   loadedFeature = 'Recipe';
 
   ngOnInit(){
     this.authService.autoLogin();
+    this.setTitle(this.title)
+  }
+
+  public setTitle(title: string) {
+    this.titleService.setTitle(title);
   }
 
   // onRecipeTab(tabname:string){

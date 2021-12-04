@@ -13,6 +13,7 @@
         <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" *ngIf="isAuthenticateUser"><a routerLink="/recipe">Recipe</a></li>
         <li routerLinkActive="active" *ngIf="!isAuthenticateUser"><a routerLink="/auth">Authenticate</a></li> 
         <li routerLinkActive="active" ><a routerLink="/shopping-list">Shopping List</a></li> 
+        <li routerLinkActive="active" ><a routerLink="/about">About Me</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li *ngIf="isAuthenticateUser">

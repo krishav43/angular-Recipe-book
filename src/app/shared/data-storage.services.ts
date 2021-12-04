@@ -12,11 +12,11 @@ export class DataStorageServices{
 
     onStoreData(){
         const recipe=this.recipeService.getRecipe();
-        console.log('Recipe ',recipe)
+        //console.log('Recipe ',recipe)
         //this.http.put('https://recipe-book-6ca69.firebaseio.com/recipe.json',recipe).subscribe(
         this.http.put('https://recipe-book-c4525-default-rtdb.firebaseio.com//recipe.json',recipe).subscribe(
             response=>{
-                console.log(response);
+                //console.log(response);
             }
         )
     }
